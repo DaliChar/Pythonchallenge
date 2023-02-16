@@ -1,14 +1,8 @@
 
-
-# In[1]:
-
-
-#directing python to our intended file 
 import os
 import csv
 
 
-# In[2]:
 
 
 #making declarations 
@@ -21,7 +15,7 @@ unique_candidate_votes = []
 # 
 # Successfully stores the header row 
 
-# In[3]:
+
 
 
 csvpath = os.path.join('election_data.csv')
@@ -43,7 +37,6 @@ with open(csvpath, newline='') as csvfile:
                 unique_candidate_votes.append(1)
 
 
-# In[4]:
 
 
 #attempting to list candidate names 
@@ -57,7 +50,6 @@ for candidate in set(candidates):
    names = candidate_list.count(candidate)
 
 
-# In[ ]:
 
 
 winner = candidates[0]
@@ -77,7 +69,6 @@ results.append(f"Total Votes: {votes_cast}\n-------------------------")
 results.append(f"-------------------------\nWinner: {winner}\n-------------------------")
 
 
-# In[ ]:
 
 
 filename = 'Election Results.txt'
