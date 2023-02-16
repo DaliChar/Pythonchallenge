@@ -43,16 +43,13 @@ initial_profit = 0
 
 
 
-# In[4]:
-
-
 # Will need it when collecting the greatest increase and decrease in profits
 total_months.append(row[0])
 profit_losses.append(row[1])
 overall_profit = overall_profit + int(row[1])
 
 
-# In[5]:
+
 
 
 # Append the profit information & calculate the total profit
@@ -60,49 +57,47 @@ profit_losses.append(row[1])
 overall_profit = overall_profit + int(row[1])
 
 
-# In[6]:
 
 
 final_profit = int(row[1])
 monthly_change_profits = final_profit - initial_profit
 
 
-# In[7]:
+
 
 
 #Store these monthly changes in a list
 monthly_changes.append(monthly_change_profits)
 
 
-# In[8]:
+
 
 
 total_change_profits = total_change_profits + monthly_change_profits
 initial_profit = final_profit
 
 
-# In[9]:
 
 
 #Calculate the average change in profits
 change_profit_losses_on_average = (total_change_profits/count)
 
 
-# In[10]:
+
 
 
 greatest_increase_profits = max(monthly_changes)
 greatest_decrease_profits = min(monthly_changes)
 
 
-# In[11]:
+
 
 
 increase_date = total_months[monthly_changes.index(greatest_increase_profits)]
 decrease_date = total_months[monthly_changes.index(greatest_decrease_profits)]
 
 
-# In[12]:
+
 
 
 print("----------------------------------------------------------")
@@ -116,7 +111,6 @@ print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(greate
 print("----------------------------------------------------------")
 
 
-# In[13]:
 
 
 with open('PyBank Analysis.txt', 'w') as text:
@@ -132,7 +126,7 @@ with open('PyBank Analysis.txt', 'w') as text:
 
 
 
-# In[ ]:
+
 
 
 
